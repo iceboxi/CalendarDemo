@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var header: CalendarHeader! 
     
     private var visibleDates: DateSegmentInfo?
+    private var currectOffsetX: CGFloat = 0
     
     var course: [String: [Lecture]]?
     
@@ -111,6 +112,20 @@ extension MainViewController: JTACMonthViewDelegate {
     
     func calendarDidScroll(_ calendar: JTACMonthView) {
         header.setupHeaderButton(calendar)
+    }
+    
+    func calendar(_ calendar: JTACMonthView, willScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        if isForwardDirect(calendar.contentOffset.x) {
+            forwardTrigger.onNext(())
+        } else {
+            backwardTrigger.onNext(())
+        }
+        
+        currectOffsetX = calendar.contentOffset.x
+    }
+    
+    private func isForwardDirect(_ x: CGFloat) -> Bool {
+        return currectOffsetX > x
     }
     
     func calendar(_ calendar: JTACMonthView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
