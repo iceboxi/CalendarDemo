@@ -54,7 +54,12 @@ extension CalendarAPI: TargetType {
     var sampleData: Data {
         var dataUrl: URL?
         switch self {
-        case .getSchedule: dataUrl = R.file.scheduleJson()
+        case .getSchedule(let week):
+            if week == 1 {
+                dataUrl = R.file.scheduleJson()
+            } else {
+                dataUrl = R.file.schedule2Json()
+            }
         }
         if let url = dataUrl, let data = try? Data(contentsOf: url) {
             return data
