@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		582850B6280A84EA00F7255A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850B5280A84EA00F7255A /* AppDelegate.swift */; };
 		582850B8280A84EA00F7255A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850B7280A84EA00F7255A /* SceneDelegate.swift */; };
-		582850BA280A84EA00F7255A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850B9280A84EA00F7255A /* ViewController.swift */; };
+		582850BA280A84EA00F7255A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850B9280A84EA00F7255A /* MainViewController.swift */; };
 		582850BD280A84EA00F7255A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582850BB280A84EA00F7255A /* Main.storyboard */; };
 		582850BF280A84EB00F7255A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582850BE280A84EB00F7255A /* Assets.xcassets */; };
 		582850C2280A84EB00F7255A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582850C0280A84EB00F7255A /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		582850B2280A84EA00F7255A /* CalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		582850B5280A84EA00F7255A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		582850B7280A84EA00F7255A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		582850B9280A84EA00F7255A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		582850B9280A84EA00F7255A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		582850BC280A84EA00F7255A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		582850BE280A84EB00F7255A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		582850C1280A84EB00F7255A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,11 +101,10 @@
 			children = (
 				582850B5280A84EA00F7255A /* AppDelegate.swift */,
 				582850B7280A84EA00F7255A /* SceneDelegate.swift */,
-				582850B9280A84EA00F7255A /* ViewController.swift */,
-				582850BB280A84EA00F7255A /* Main.storyboard */,
-				582850BE280A84EB00F7255A /* Assets.xcassets */,
+				582850E5280A86D600F7255A /* Modules */,
+				582850E7280A870B00F7255A /* Resources */,
+				582850E6280A86DE00F7255A /* Supporting Files */,
 				582850C0280A84EB00F7255A /* LaunchScreen.storyboard */,
-				582850C3280A84EB00F7255A /* Info.plist */,
 			);
 			path = CalendarDemo;
 			sourceTree = "<group>";
@@ -125,6 +124,31 @@
 				582850D8280A84EB00F7255A /* CalendarDemoUITestsLaunchTests.swift */,
 			);
 			path = CalendarDemoUITests;
+			sourceTree = "<group>";
+		};
+		582850E5280A86D600F7255A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				582850B9280A84EA00F7255A /* MainViewController.swift */,
+				582850BB280A84EA00F7255A /* Main.storyboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		582850E6280A86DE00F7255A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				582850C3280A84EB00F7255A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		582850E7280A870B00F7255A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				582850BE280A84EB00F7255A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				582850BA280A84EA00F7255A /* ViewController.swift in Sources */,
+				582850BA280A84EA00F7255A /* MainViewController.swift in Sources */,
 				582850B6280A84EA00F7255A /* AppDelegate.swift in Sources */,
 				582850B8280A84EA00F7255A /* SceneDelegate.swift in Sources */,
 			);
