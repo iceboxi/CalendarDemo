@@ -43,6 +43,7 @@
 		5861CB08280A9E3100A729DF /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB07280A9E3100A729DF /* DateCell.swift */; };
 		5861CB0B280AA3FA00A729DF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB0A280AA3FA00A729DF /* DateExtension.swift */; };
 		5861CB0D280AA42600A729DF /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB0C280AA42600A729DF /* UIStackViewExtension.swift */; };
+		5861CB0F280AA9E800A729DF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB0E280AA9E800A729DF /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		5861CB07280A9E3100A729DF /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		5861CB0A280AA3FA00A729DF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		5861CB0C280AA42600A729DF /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
+		5861CB0E280AA9E800A729DF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		582850E5280A86D600F7255A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5861CB0E280AA9E800A729DF /* MainViewModel.swift */,
 				582850B9280A84EA00F7255A /* MainViewController.swift */,
 				5861CB05280A9D3E00A729DF /* CalendarHeader.swift */,
 				5861CB07280A9E3100A729DF /* DateCell.swift */,
@@ -530,6 +533,7 @@
 				5861CAED280A8D3E00A729DF /* Single+ObjectMapper.swift in Sources */,
 				5861CAEF280A8D6C00A729DF /* LibsManager.swift in Sources */,
 				582850BA280A84EA00F7255A /* MainViewController.swift in Sources */,
+				5861CB0F280AA9E800A729DF /* MainViewModel.swift in Sources */,
 				582850B6280A84EA00F7255A /* AppDelegate.swift in Sources */,
 				582850B8280A84EA00F7255A /* SceneDelegate.swift in Sources */,
 				5861CAEB280A8D3E00A729DF /* Response+ObjectMapper.swift in Sources */,

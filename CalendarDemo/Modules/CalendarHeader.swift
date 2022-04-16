@@ -25,9 +25,6 @@ class CalendarHeader: UIView {
         }
     }
     
-    var backwardHandler: (() -> Void)?
-    var forwardHandler: (() -> Void)?
-    
     func configure(_ calendar: JTACMonthView, and visibleDates: DateSegmentInfo) {
         setupTimeRange(visibleDates)
         setupHeaderButton(calendar)
@@ -39,17 +36,6 @@ class CalendarHeader: UIView {
         
         let backwardStatus = calendar.contentOffset.x >= calendar.contentSize.width - UIScreen.main.bounds.width
         setupBackwardButton(backwardStatus)
-    }
-}
-
-// MARK: - Action
-extension CalendarHeader {
-    @IBAction func backwardAction() {
-        backwardHandler?()
-    }
-    
-    @IBAction func forwardAction() {
-        forwardHandler?()
     }
 }
 
