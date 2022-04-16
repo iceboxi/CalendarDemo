@@ -21,7 +21,7 @@ class MainViewModel: NSObject, ViewModelType {
         let items: BehaviorRelay<[String: [Lecture]]>
     }
     
-    var week = 1    // may today week, 0 as this week, 1 backward, -1 forward
+    var week = 0    // may today week, 0 as this week, 1 backward, -1 forward
     let malSelected = PublishSubject<URL>()
     
     let provider = MoyaProvider<CalendarAPI>(stubClosure: MoyaProvider.immediatelyStub)
@@ -32,7 +32,7 @@ class MainViewModel: NSObject, ViewModelType {
         input.forward
             .flatMapLatest({ [weak self] _ -> Observable<[String: [Lecture]]> in
                 guard let self = self else { return Observable.just([:]) }
-                self.week -= 1
+                self.week += 1
                 return self.request()
             })
             .subscribe(onNext: { list in
@@ -45,7 +45,7 @@ class MainViewModel: NSObject, ViewModelType {
         input.backward
             .flatMapLatest({ [weak self] _ -> Observable<[String: [Lecture]]> in
                 guard let self = self else { return Observable.just([:]) }
-                self.week += 1
+                self.week -= 1
                 return self.request()
             })
             .subscribe(onNext: { list in

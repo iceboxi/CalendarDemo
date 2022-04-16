@@ -20,8 +20,8 @@ class MainViewController: UIViewController {
     var course: [String: [Lecture]]?
     
     let viewModel = MainViewModel()
-    let forwardTrigger = PublishSubject<Void>()
     let backwardTrigger = PublishSubject<Void>()
+    let forwardTrigger = PublishSubject<Void>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
             })
             .disposed(by: rx.disposeBag)
         
-        header.forward.rx.tap.asDriver()
+        header.backward.rx.tap.asDriver()
             .drive(onNext: { [weak self] _ in
                 guard let self = self else {
                     return
@@ -53,19 +53,19 @@ class MainViewController: UIViewController {
                 
                 self.scrollForward()
                 if self.canScrollForward() {
-                    self.forwardTrigger.onNext(())
+                    self.backwardTrigger.onNext(())
                 }
             })
             .disposed(by: rx.disposeBag)
         
-        header.backward.rx.tap.asDriver()
+        header.forward.rx.tap.asDriver()
             .drive(onNext: { [weak self] _ in
                 guard let self = self else {
                     return
                 }
                 
                 self.scrollBackward()
-                self.backwardTrigger.onNext(())
+                self.forwardTrigger.onNext(())
             })
             .disposed(by: rx.disposeBag)
     }

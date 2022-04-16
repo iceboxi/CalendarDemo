@@ -9,13 +9,9 @@ import UIKit
 import JTAppleCalendar
 
 class CalendarHeader: UIView {
-    @IBOutlet weak var title: UILabel! {
-        didSet {
-            title.text = "Lesson Time"
-        }
-    }
-    @IBOutlet weak var forward: UIButton!
+    @IBOutlet weak var title: UILabel!
     @IBOutlet weak var backward: UIButton!
+    @IBOutlet weak var forward: UIButton!
     @IBOutlet weak var timeRange: UILabel!
     @IBOutlet weak var zone: UILabel! {
         didSet {
@@ -31,24 +27,27 @@ class CalendarHeader: UIView {
     }
     
     func setupHeaderButton(_ calendar: JTACMonthView) {
-        let forwardStatus = calendar.contentOffset.x <= 0
-        setupForwardButton(forwardStatus)
-        
-        let backwardStatus = calendar.contentOffset.x >= calendar.contentSize.width - UIScreen.main.bounds.width
-        setupBackwardButton(backwardStatus)
+        let status = isButtonEnable(calendar)
+        setupBackwardButton(status.forward)
+        setupForwardButton(status.backward)
+    }
+    
+    private func isButtonEnable(_ calendar: JTACMonthView) -> (forward: Bool, backward: Bool) {
+        return (!(calendar.contentOffset.x <= 0),
+                !(calendar.contentOffset.x >= calendar.contentSize.width - UIScreen.main.bounds.width))
     }
 }
 
 // MARK: - Private
 extension CalendarHeader {
-    private func setupForwardButton(_ status: Bool) {
-        forward.isEnabled = !status
-        forward.tintColor = status ? .lightGray : .darkGray
+    private func setupBackwardButton(_ enable: Bool) {
+        backward.isEnabled = enable
+        backward.tintColor = enable ? .darkGray : .lightGray
     }
     
-    private func setupBackwardButton(_ status: Bool) {
-        backward.isEnabled = !status
-        backward.tintColor = status ? .lightGray : .darkGray
+    private func setupForwardButton(_ enable: Bool) {
+        forward.isEnabled = enable
+        forward.tintColor = enable ? .darkGray : .lightGray
     }
     
     private func setupTimeRange(_ visibleDates: DateSegmentInfo) {

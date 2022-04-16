@@ -28,11 +28,11 @@ class DateCell: JTACDayCell {
         dateLabel.text = cellState.text
         dayLabel.text = cellState.day.desription
         
-        setupColor(with: cellState)
-        drawTime(with: lectures)
+        setDayColor(with: cellState)
+        stackLectureTime(with: lectures)
     }
     
-    private func drawTime(with lectures: [Lecture]?) {
+    private func stackLectureTime(with lectures: [Lecture]?) {
         lectures?.forEach({ lecture in
             let lbl = getCutsomLabel()
             lbl.text = lecture.start.stringFormat("HH:mm")
@@ -48,7 +48,7 @@ class DateCell: JTACDayCell {
         return lbl
     }
     
-    private func setupColor(with cellState: CellState) {
+    private func setDayColor(with cellState: CellState) {
         if isExpire(cellState.date) {
             setAsExpire()
         } else {
