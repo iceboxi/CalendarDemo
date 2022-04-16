@@ -7,6 +7,10 @@
 
 import XCTest
 @testable import CalendarDemo
+import Moya
+import RxMoya
+import ObjectMapper
+import NSObject_Rx
 
 class CalendarDemoTests: XCTestCase {
 
@@ -18,12 +22,14 @@ class CalendarDemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testScheduleAPI() throws {
+        let provider = MoyaProvider<CalendarAPI>(stubClosure: MoyaProvider.immediatelyStub)
+        provider.rx.request(.getSchedule(week: 1))
+            .mapObject(Schedule.self)
+            .subscribe(onSuccess: { list in
+                XCTAssertEqual(list.available.count, 5)
+            })
+            .disposed(by: rx.disposeBag)
     }
 
     func testPerformanceExample() throws {
