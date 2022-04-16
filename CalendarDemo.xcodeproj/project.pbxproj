@@ -37,6 +37,12 @@
 		5861CAF9280A8E0600A729DF /* Schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 5861CAF5280A8E0600A729DF /* Schedule.json */; };
 		5861CAFC280A8E0600A729DF /* EmptyObject.json in Resources */ = {isa = PBXBuildFile; fileRef = 5861CAF8280A8E0600A729DF /* EmptyObject.json */; };
 		5861CAFE280A924500A729DF /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CAFD280A924500A729DF /* ScheduleModel.swift */; };
+		5861CB01280A962200A729DF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB00280A962200A729DF /* ViewModelType.swift */; };
+		5861CB04280A981E00A729DF /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5861CB03280A981E00A729DF /* JTAppleCalendar */; };
+		5861CB06280A9D3E00A729DF /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB05280A9D3E00A729DF /* CalendarHeader.swift */; };
+		5861CB08280A9E3100A729DF /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB07280A9E3100A729DF /* DateCell.swift */; };
+		5861CB0B280AA3FA00A729DF /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB0A280AA3FA00A729DF /* DateExtension.swift */; };
+		5861CB0D280AA42600A729DF /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861CB0C280AA42600A729DF /* UIStackViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,11 @@
 		5861CAF5280A8E0600A729DF /* Schedule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Schedule.json; sourceTree = "<group>"; };
 		5861CAF8280A8E0600A729DF /* EmptyObject.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyObject.json; sourceTree = "<group>"; };
 		5861CAFD280A924500A729DF /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		5861CB00280A962200A729DF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		5861CB05280A9D3E00A729DF /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		5861CB07280A9E3100A729DF /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		5861CB0A280AA3FA00A729DF /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5861CB0C280AA42600A729DF /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5861CB04280A981E00A729DF /* JTAppleCalendar in Frameworks */,
 				582850FA280A8A2C00F7255A /* RxMoya in Frameworks */,
 				58285100280A8A6100F7255A /* ObjectMapper in Frameworks */,
 				582850F4280A89D200F7255A /* Rswift in Frameworks */,
@@ -145,6 +157,8 @@
 				582850B5280A84EA00F7255A /* AppDelegate.swift */,
 				582850B7280A84EA00F7255A /* SceneDelegate.swift */,
 				582850E5280A86D600F7255A /* Modules */,
+				5861CAFF280A961100A729DF /* Common */,
+				5861CB09280AA3DA00A729DF /* Extensions */,
 				5861CAE3280A8CF100A729DF /* Network */,
 				5861CAE1280A8CDC00A729DF /* Manager */,
 				5861CAE2280A8CE500A729DF /* Models */,
@@ -177,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				582850B9280A84EA00F7255A /* MainViewController.swift */,
+				5861CB05280A9D3E00A729DF /* CalendarHeader.swift */,
+				5861CB07280A9E3100A729DF /* DateCell.swift */,
 				582850BB280A84EA00F7255A /* Main.storyboard */,
 			);
 			path = Modules;
@@ -268,6 +284,23 @@
 			path = Stubbed;
 			sourceTree = "<group>";
 		};
+		5861CAFF280A961100A729DF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5861CB00280A962200A729DF /* ViewModelType.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5861CB09280AA3DA00A729DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5861CB0A280AA3FA00A729DF /* DateExtension.swift */,
+				5861CB0C280AA42600A729DF /* UIStackViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,6 +331,7 @@
 				58285102280A8A8400F7255A /* RxDataSources */,
 				58285105280A8A9D00F7255A /* SnapKit */,
 				58285108280A8ADC00F7255A /* IQKeyboardManagerSwift */,
+				5861CB03280A981E00A729DF /* JTAppleCalendar */,
 			);
 			productName = CalendarDemo;
 			productReference = 582850B2280A84EA00F7255A /* CalendarDemo.app */;
@@ -381,6 +415,7 @@
 				58285101280A8A8400F7255A /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				58285104280A8A9D00F7255A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				58285107280A8ADC00F7255A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				5861CB02280A981E00A729DF /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
 			);
 			productRefGroup = 582850B3280A84EA00F7255A /* Products */;
 			projectDirPath = "";
@@ -487,6 +522,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5861CB06280A9D3E00A729DF /* CalendarHeader.swift in Sources */,
+				5861CB0D280AA42600A729DF /* UIStackViewExtension.swift in Sources */,
+				5861CB0B280AA3FA00A729DF /* DateExtension.swift in Sources */,
 				5861CAF3280A8DF700A729DF /* CalendarAPI.swift in Sources */,
 				5861CAF1280A8D8800A729DF /* LogManager.swift in Sources */,
 				5861CAED280A8D3E00A729DF /* Single+ObjectMapper.swift in Sources */,
@@ -495,6 +533,8 @@
 				582850B6280A84EA00F7255A /* AppDelegate.swift in Sources */,
 				582850B8280A84EA00F7255A /* SceneDelegate.swift in Sources */,
 				5861CAEB280A8D3E00A729DF /* Response+ObjectMapper.swift in Sources */,
+				5861CB08280A9E3100A729DF /* DateCell.swift in Sources */,
+				5861CB01280A962200A729DF /* ViewModelType.swift in Sources */,
 				5861CAEC280A8D3E00A729DF /* ObservableType+ObjectMapper.swift in Sources */,
 				5828510B280A8B7700F7255A /* R.generated.swift in Sources */,
 				5861CAFE280A924500A729DF /* ScheduleModel.swift in Sources */,
@@ -682,6 +722,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -691,7 +732,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -710,6 +751,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -719,7 +761,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -913,6 +955,14 @@
 				minimumVersion = 6.5.0;
 			};
 		};
+		5861CB02280A981E00A729DF /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -965,6 +1015,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 58285107280A8ADC00F7255A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		5861CB03280A981E00A729DF /* JTAppleCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5861CB02280A981E00A729DF /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
+			productName = JTAppleCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -9,10 +9,9 @@ import Foundation
 import CocoaLumberjackSwift
 
 public func logInitail() {
-    if let logger = DDTTYLogger.sharedInstance {
-        logger.logFormatter = CustomFormat(false)
-        DDLog.add(logger)
-    }
+    let logger = DDOSLogger()
+    logger.logFormatter = CustomFormat(false)
+    DDLog.add(logger)
     
     let fileLogger: DDFileLogger = DDFileLogger()
     fileLogger.logFormatter = CustomFormat(true)
