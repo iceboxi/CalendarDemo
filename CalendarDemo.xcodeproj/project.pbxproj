@@ -16,6 +16,17 @@
 		582850CD280A84EB00F7255A /* CalendarDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850CC280A84EB00F7255A /* CalendarDemoTests.swift */; };
 		582850D7280A84EB00F7255A /* CalendarDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850D6280A84EB00F7255A /* CalendarDemoUITests.swift */; };
 		582850D9280A84EB00F7255A /* CalendarDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582850D8280A84EB00F7255A /* CalendarDemoUITestsLaunchTests.swift */; };
+		582850E9280A88DC00F7255A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 582850E8280A88DC00F7255A /* Settings.bundle */; };
+		582850EF280A89A600F7255A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 582850EE280A89A600F7255A /* RxCocoa */; };
+		582850F1280A89A600F7255A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 582850F0280A89A600F7255A /* RxSwift */; };
+		582850F4280A89D200F7255A /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 582850F3280A89D200F7255A /* Rswift */; };
+		582850F7280A89F200F7255A /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 582850F6280A89F200F7255A /* CocoaLumberjackSwift */; };
+		582850FA280A8A2C00F7255A /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 582850F9280A8A2C00F7255A /* RxMoya */; };
+		582850FD280A8A4900F7255A /* NSObject-Rx in Frameworks */ = {isa = PBXBuildFile; productRef = 582850FC280A8A4900F7255A /* NSObject-Rx */; };
+		58285100280A8A6100F7255A /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 582850FF280A8A6100F7255A /* ObjectMapper */; };
+		58285103280A8A8400F7255A /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 58285102280A8A8400F7255A /* RxDataSources */; };
+		58285106280A8A9D00F7255A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58285105280A8A9D00F7255A /* SnapKit */; };
+		58285109280A8ADC00F7255A /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 58285108280A8ADC00F7255A /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,7 @@
 		582850D2280A84EB00F7255A /* CalendarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		582850D6280A84EB00F7255A /* CalendarDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDemoUITests.swift; sourceTree = "<group>"; };
 		582850D8280A84EB00F7255A /* CalendarDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		582850E8280A88DC00F7255A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582850FA280A8A2C00F7255A /* RxMoya in Frameworks */,
+				58285100280A8A6100F7255A /* ObjectMapper in Frameworks */,
+				582850F4280A89D200F7255A /* Rswift in Frameworks */,
+				582850F1280A89A600F7255A /* RxSwift in Frameworks */,
+				582850F7280A89F200F7255A /* CocoaLumberjackSwift in Frameworks */,
+				58285109280A8ADC00F7255A /* IQKeyboardManagerSwift in Frameworks */,
+				58285103280A8A8400F7255A /* RxDataSources in Frameworks */,
+				58285106280A8A9D00F7255A /* SnapKit in Frameworks */,
+				582850FD280A8A4900F7255A /* NSObject-Rx in Frameworks */,
+				582850EF280A89A600F7255A /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +168,7 @@
 		582850E7280A870B00F7255A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				582850E8280A88DC00F7255A /* Settings.bundle */,
 				582850BE280A84EB00F7255A /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -158,15 +181,30 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 582850DC280A84EB00F7255A /* Build configuration list for PBXNativeTarget "CalendarDemo" */;
 			buildPhases = (
+				582850EA280A890100F7255A /* Swiftlint */,
+				582850EB280A891F00F7255A /* R.swift */,
 				582850AE280A84EA00F7255A /* Sources */,
 				582850AF280A84EA00F7255A /* Frameworks */,
 				582850B0280A84EA00F7255A /* Resources */,
+				582850EC280A895900F7255A /* LicensePlist */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CalendarDemo;
+			packageProductDependencies = (
+				582850EE280A89A600F7255A /* RxCocoa */,
+				582850F0280A89A600F7255A /* RxSwift */,
+				582850F3280A89D200F7255A /* Rswift */,
+				582850F6280A89F200F7255A /* CocoaLumberjackSwift */,
+				582850F9280A8A2C00F7255A /* RxMoya */,
+				582850FC280A8A4900F7255A /* NSObject-Rx */,
+				582850FF280A8A6100F7255A /* ObjectMapper */,
+				58285102280A8A8400F7255A /* RxDataSources */,
+				58285105280A8A9D00F7255A /* SnapKit */,
+				58285108280A8ADC00F7255A /* IQKeyboardManagerSwift */,
+			);
 			productName = CalendarDemo;
 			productReference = 582850B2280A84EA00F7255A /* CalendarDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +277,17 @@
 				Base,
 			);
 			mainGroup = 582850A9280A84EA00F7255A;
+			packageReferences = (
+				582850ED280A89A600F7255A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				582850F2280A89D200F7255A /* XCRemoteSwiftPackageReference "R.swift" */,
+				582850F5280A89F200F7255A /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				582850F8280A8A2C00F7255A /* XCRemoteSwiftPackageReference "Moya" */,
+				582850FB280A8A4900F7255A /* XCRemoteSwiftPackageReference "NSObject-Rx" */,
+				582850FE280A8A6100F7255A /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				58285101280A8A8400F7255A /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				58285104280A8A9D00F7255A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				58285107280A8ADC00F7255A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 582850B3280A84EA00F7255A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582850E9280A88DC00F7255A /* Settings.bundle in Resources */,
 				582850C2280A84EB00F7255A /* LaunchScreen.storyboard in Resources */,
 				582850BF280A84EB00F7255A /* Assets.xcassets in Resources */,
 				582850BD280A84EA00F7255A /* Main.storyboard in Resources */,
@@ -276,6 +326,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		582850EA280A890100F7255A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif which mint >/dev/null; then\n    mint run swiftlint\nelse\n    echo \"warning: SwiftLint not installed, run bootstrap.sh or download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		582850EB280A891F00F7255A /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif mint list | grep -q 'R.swift'; then\n    mint run R.swift rswift generate \"$SRCROOT/R.generated.swift\"\nelse\n    echo \"error: R.swift not installed; run 'mint bootstrap' to install\"\nfi\n";
+		};
+		582850EC280A895900F7255A /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nif test -d \"/opt/homebrew/bin/\"; then\n    PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n    PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif which mint >/dev/null; then\n    mint run mono0926/LicensePlist --output-path \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Settings.bundle\"\nelse\n    echo \"warning: LicensePlist not installed, run bootstrap.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		582850AE280A84EA00F7255A /* Sources */ = {
@@ -626,6 +735,134 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		582850ED280A89A600F7255A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		582850F2280A89D200F7255A /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		582850F5280A89F200F7255A /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		582850F8280A8A2C00F7255A /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		582850FB280A8A4900F7255A /* XCRemoteSwiftPackageReference "NSObject-Rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/NSObject-Rx";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		582850FE280A8A6100F7255A /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		58285101280A8A8400F7255A /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		58285104280A8A9D00F7255A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		58285107280A8ADC00F7255A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		582850EE280A89A600F7255A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850ED280A89A600F7255A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		582850F0280A89A600F7255A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850ED280A89A600F7255A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		582850F3280A89D200F7255A /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850F2280A89D200F7255A /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+		582850F6280A89F200F7255A /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850F5280A89F200F7255A /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		582850F9280A8A2C00F7255A /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850F8280A8A2C00F7255A /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		582850FC280A8A4900F7255A /* NSObject-Rx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850FB280A8A4900F7255A /* XCRemoteSwiftPackageReference "NSObject-Rx" */;
+			productName = "NSObject-Rx";
+		};
+		582850FF280A8A6100F7255A /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 582850FE280A8A6100F7255A /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+		58285102280A8A8400F7255A /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58285101280A8A8400F7255A /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		58285105280A8A9D00F7255A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58285104280A8A9D00F7255A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		58285108280A8ADC00F7255A /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58285107280A8ADC00F7255A /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 582850AA280A84EA00F7255A /* Project object */;
 }
